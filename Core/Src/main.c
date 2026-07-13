@@ -161,15 +161,15 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    //uint8_t ccbuf[2]={0x44,0x55};
-    //HAL_UART_Transmit(&huart6,ccbuf,2,1000);
-    //HAL_Delay(1000);
-//	MySPI_SwapByte(1);
-//	   if((rxData[1]&0x80)!=0)
-//     {
-//         HAL_UART_Transmit(&huart6,rxData,2,100);
-//     }
-//    HAL_Delay(1000);
+    uint8_t ccbuf[2]={0x44,0x55};
+    HAL_UART_Transmit(&huart6,ccbuf,2,1000);
+    HAL_Delay(1000);
+	  MySPI_SwapByte(1);
+	   if((rxData[1]&0x80)!=0)
+    {
+        HAL_UART_Transmit(&huart6,rxData,2,100);
+    }
+   HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
